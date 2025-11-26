@@ -1,0 +1,23 @@
+# NOVO chamas.yaml (AQUI VOCÊ FAZ AS EDIÇÕES)
+path: datasets/chamas/ # <--- CORRIGIR ISSO! ERA 'datasets/chamas/' no seu antigo.
+                      # Os '..' do Roboflow significam "voltar uma pasta",
+                      # mas o YOLOv8 espera o caminho completo a partir da raiz do projeto.
+
+train: train/images   # <--- CORRIGIR ISSO! Remover o '../'
+val: valid/images     # <--- CORRIGIR ISSO! Remover o '../'
+test: test/images     # <--- CORRIGIR ISSO! Remover o '../'
+
+nc: 3
+# MUDAR A ORDEM AQUI PARA COMBINAR COM O ARDUINO E SUA ESTRUTURA ORIGINAL:
+names:
+  0: carburante      # Antes estava 'carburante' no Roboflow!
+  1: neutra  # Antes estava 'neutra' no Roboflow!
+  2: oxidante    # Antes estava 'oxidante' no Roboflow!
+
+# Manter as informações do Roboflow, são úteis.
+roboflow:
+  workspace: aline-fvzzs
+  project: senai-vndf4
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/aline-fvzzs/senai-vndf4/dataset/2=
